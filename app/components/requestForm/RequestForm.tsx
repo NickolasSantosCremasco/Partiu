@@ -10,9 +10,20 @@ const label = "mb-2 block text-sm font-semibold text-[#151515]";
 export default function RequestForm() {
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setSubmitted(true);
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+     event.preventDefault()
+     const formData = new FormData(event.currentTarget)
+
+     const data = Object.fromEntries(formData);
+
+     fetch("/api/requests", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+     })
+     
   }
 
   if (submitted) {
