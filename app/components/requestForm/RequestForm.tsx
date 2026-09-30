@@ -185,7 +185,7 @@
               </h2>
 
               <p className="mt-3 text-[#151515]/70">
-                  Recebemos seu pedido. Agora vamos pesquisar algumas opções que façam sentido para você.
+                  Recebemos seu pedido. Agora vamos pesquisar algumas opções que façam sentido para você e enviaremos pelo seu e-mail.
               </p>
 
               <button
